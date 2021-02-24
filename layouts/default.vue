@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <main class="container relative min-h-screen pt-16">
     <Nuxt />
-  </div>
+  </main>
 </template>
 
 <style>
