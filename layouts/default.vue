@@ -1,11 +1,16 @@
 <template>
   <main class="container relative min-h-screen pt-16">
+<<<<<<< HEAD
     <Header />
+=======
+    <Header></Header>
+>>>>>>> 4e2dafd02a10f9d03039524ab0faad043320cb7d
     <Nuxt />
   </main>
 </template>
 
 <script>
+<<<<<<< HEAD
 import Header from '~/components/Header'
 
 export default {
@@ -13,19 +18,21 @@ export default {
     Header
   }
 }
+=======
+import Header from "../components/Header";
+
+export default {
+  components: {
+    Header,
+  },
+};
+>>>>>>> 4e2dafd02a10f9d03039524ab0faad043320cb7d
 </script>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
