@@ -1,16 +1,11 @@
 <template>
   <main class="container relative min-h-screen pt-16">
-<<<<<<< HEAD
     <Header />
-=======
-    <Header></Header>
->>>>>>> 4e2dafd02a10f9d03039524ab0faad043320cb7d
     <Nuxt />
   </main>
 </template>
 
 <script>
-<<<<<<< HEAD
 import Header from '~/components/Header'
 
 export default {
@@ -18,15 +13,6 @@ export default {
     Header
   }
 }
-=======
-import Header from "../components/Header";
-
-export default {
-  components: {
-    Header,
-  },
-};
->>>>>>> 4e2dafd02a10f9d03039524ab0faad043320cb7d
 </script>
 
 <style>
