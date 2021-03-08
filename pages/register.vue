@@ -55,7 +55,10 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
+  middleware: ['checkRegister'],
   data() {
     return {
       form: {
@@ -73,6 +76,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('alert',['setMessage']),
     async onSubmit() {
       const user = await this.$auth()
 
@@ -91,7 +95,7 @@ export default {
         })
         this.$router.push('/')
       } catch (e) {
-        console.log(e);
+        this.setMessage({ message: '登録に失敗しました。'})
       }
     },
 

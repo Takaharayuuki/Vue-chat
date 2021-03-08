@@ -7,10 +7,13 @@
 
 <script>
 import Header from '~/components/Header'
+import Alert from '~/components/Alert'
+
 
 export default {
   components: {
-    Header
+    Header,
+    Alert
   }
 }
 </script>
