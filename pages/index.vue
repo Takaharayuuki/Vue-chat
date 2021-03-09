@@ -3,6 +3,7 @@
     <div>
       <div v-for="room in rooms"
       :key="room.id"
+      @click="moveToRoomPage(room.id)"
       class="bg-white max-w-sm rounded-lg overflow-hidden shadow m-4 mb-5 p-4 h-32">
       <div>
         <img :src="room.topImageUrl" class="float-left object-cover rounded-lg w-24 h-24 mr-4">
@@ -24,7 +25,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 import ModalBase from '~/components/ModalBase'
 import CreateRoomModal from '~/components/createRoomModal'
 
@@ -59,11 +60,15 @@ export default {
   },
 
   methods: {
+    ...mapMutations('alert',['setMessage']),
     openModal() {
       this.isCreateMode = true
     },
     closeModal() {
       this.isCreateMode = false
+    },
+    moveToRoomPage(roomId) {
+      this.$router.push(`/rooms/${roomId}`)
     }
   },
 }
